@@ -10,7 +10,7 @@ public class WindowClosing extends Frame {
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                dispose();
+                System.exit(0);
             }
         });
 

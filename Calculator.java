@@ -1,6 +1,5 @@
 import java.awt.*;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import java.awt.event.*;
 
 
 public class Calculator extends Frame implements ActionListener {
@@ -88,6 +87,13 @@ public class Calculator extends Frame implements ActionListener {
         clear = new Button("C");
         clear.setBounds(230, 110, 50, 50);
         clear.addActionListener(this);
+
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                dispose();
+            }
+        });
 
         // Adding Components to Frame
         add(disp);
